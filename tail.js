@@ -21,3 +21,7 @@ assertEqual(words[1], "Labs");
 const words1 = ["Hello"];
 tail(words1);
 assertEqual(words1.length, 1);
+
+const words2 = [];
+tail(words2);
+assertEqual(words2.length, 0);

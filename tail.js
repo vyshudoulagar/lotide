@@ -1,6 +1,6 @@
 const tail = function(arr) {
   const newArr = arr.slice(1);
-  return newArr;
+  console.log(newArr);
 };
 
 const assertEqual = function(actual, expected) {

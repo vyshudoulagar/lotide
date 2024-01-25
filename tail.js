@@ -1,6 +1,6 @@
 const tail = function(arr) {
-  arr = arr.slice(1);
-  return arr;
+  const newArr = arr.slice(1);
+  return newArr;
 };
 
 const assertEqual = function(actual, expected) {
@@ -17,3 +17,7 @@ const words = tail(["Yo Yo", "Lighthouse", "Labs"]);
 assertEqual(words.length, 2); // check if array length is 2
 assertEqual(words[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(words[1], "Labs");
+
+const words1 = ["Hello"];
+tail(words1);
+assertEqual(words1.length, 1);

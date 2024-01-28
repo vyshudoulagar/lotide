@@ -8,12 +8,14 @@ const assertEqual = function(actual, expected) {
 
   const eqArrays = function(arr1, arr2){
     if(arr1.length === arr2.length){
+      var result = true;
       for(let i = 0; i < arr1.length; i++){
-        var result = true;
+        
         if(arr1[i] === arr2[i] && result === true){
-            result = true 
+            result = true; 
         }else{
             result = false;
+            return result;
         }
         
       }
@@ -30,3 +32,7 @@ console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
 console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 4, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), true);
+assertEqual(eqArrays([2, 4, 3], [1, 2, 3]), true);

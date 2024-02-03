@@ -28,7 +28,8 @@ const takeUntil = function(array, callback) { /* takes array and callback functi
       result.push(item);
     }
   }
-  return result;
+  return result; // return result if callback never returns a truthy value
+};
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

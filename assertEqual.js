@@ -6,7 +6,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual('Bootcamp', 'Bootcamp');
-assertEqual(1, 3);
-assertEqual('Day', 'Night');
-assertEqual(5, 5);
+
+module.exports = assertEqual;

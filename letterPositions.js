@@ -1,24 +1,24 @@
 const assertArraysEqual = require('./assertArraysEqual');
-const assertObjectsEqual= require('./assertObjectsEqual');
+const assertObjectsEqual = require('./assertObjectsEqual');
 
 const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    let letter = sentence[i];
-    if (letter !== " ") {
-      if (results[letter]) {
-        results[letter].push(i);
-      } else {
-        results[letter] = [i];
-      }
+    const results = {};
+    for (let i = 0; i < sentence.length; i++) {
+        let letter = sentence[i];
+        if (letter !== " ") {
+            if (results[letter]) {
+                results[letter].push(i);
+            } else {
+                results[letter] = [i];
+            }
+        }
     }
-  }
-  return results;
+    return results;
 };
 
 module.exports = letterPositions;
 
-assertArraysEqual(letterPositions("hello").l, [2,3]);
+assertArraysEqual(letterPositions("hello").l, [2, 3]);
 assertObjectsEqual(
     letterPositions("lighthouse in the house"),
     {

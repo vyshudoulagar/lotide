@@ -3,13 +3,13 @@ const tail = require('../tail');
 
 describe("#tail", () => {
     it("returns ['Lighthouse', 'Labs'] for ['yo yo', 'Lighthouse', 'Labs']", () => {
-        assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]),['Lighthouse', 'Labs']);
+        assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), ['Lighthouse', 'Labs']);
     });
     it("has arraylength of 2 for tail(['yo yo', 'Lighthouse', 'Labs'])", () => {
         assert.strictEqual(tail(["Yo Yo", "Lighthouse", "Labs"]).length, 2);
     });
     it("returns [] for ['Hello']", () => {
-        assert.deepEqual(tail(["Hello"]),[]);
+        assert.deepEqual(tail(["Hello"]), []);
     });
     it("has arraylength of 0 for tail(['Hello'])", () => {
         assert.strictEqual(tail(['Hello']).length, 0);

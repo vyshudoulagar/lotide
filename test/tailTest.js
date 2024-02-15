@@ -14,6 +14,12 @@ describe("#tail", () => {
     it("has arraylength of 0 for tail(['Hello'])", () => {
         assert.strictEqual(tail(['Hello']).length, 0);
     });
+    it("make sure the original array was not altered by the tail function", () => {
+        const words = ["Yo Yo", "Lighthouse", "Labs"];
+        const result = tail(words);
+        assert.deepEqual(result, ["Lighthouse", "Labs"]);
+        assert.strictEqual(words.length, 3);
+    });
 })
 
 

@@ -1,14 +1,15 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
-const flatten = function(array) {
+const flatten = function(array) { //takes array as argument
     const result = [];
     for (let elt of array) {
-        if (Array.isArray(elt)) {
+        if (Array.isArray(elt)) { //if the element is array it iterates through it
             for (let items of elt) {
-                result.push(items);
+                result.push(items); //pushes the element to result array
             }
-        } else {
-            result.push(elt);
+            return;
+        }
+            result.push(elt); //if element is not an array
         }
     }
     console.log(result);

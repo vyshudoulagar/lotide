@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function(object, value) { //takes an object and a value as arguments
     const keys = Object.keys(object);
@@ -10,12 +9,3 @@ const findKeyByValue = function(object, value) { //takes an object and a value a
 };
 
 module.exports = findKeyByValue;
-
-const bestTVShowsByGenre = {
-    sci_fi: "The Expanse",
-    comedy: "Brooklyn Nine-Nine",
-    drama: "The Wire"
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

@@ -1,6 +1,6 @@
 {
   "name": "@vyshudoulagar/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "lotide modular utilities",
   "main": "index.js",
   "directories": {

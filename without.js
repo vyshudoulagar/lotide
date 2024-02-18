@@ -15,7 +15,7 @@ module.exports = without;
 
 without([1, 2, 3], [1]); // => [2, 3]
 without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-without([1, 2, 3, 4], [1, 2, 3, 4]);
+console.log(without([1, 2, 3, 4], [1, 2, 3, 4]));
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
